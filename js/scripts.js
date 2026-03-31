@@ -291,12 +291,16 @@ window.addEventListener('DOMContentLoaded', event => {
     }
   }
 
-  function openFully() {
-    opened = true;
-    flap.style.transition = "transform .55s ease";
-    card.style.transition = "transform .55s ease";
-    render(1);
-  }
+    function openFully() {
+      opened = true;
+      flap.style.transition = "transform .55s ease";
+      card.style.transition = "transform .55s ease";
+      render(1);
+    
+      setTimeout(() => {
+        hideOpening();
+      }, 700);
+    }
 
   function closeFully() {
     opened = false;
