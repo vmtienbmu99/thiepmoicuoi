@@ -1,729 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Thư mời cưới</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.png" alt="..." /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Thư mời cưới</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#page-top">
+        <img src="assets/img/navbar-logo.png" alt="..." />
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        Menu
+        <i class="fas fa-bars ms-1"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#services">Happy Wedding</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Ảnh cưới</a></li>
+          <li class="nav-item"><a class="nav-link" href="#guestbook">SỔ LƯU BÚT</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gift">HỘP MỪNG CƯỚI</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Opening invitation -->
+  <div class="mail-opening" id="mailOpening">
+    <div class="mail-opening__bg"></div>
+
+    <div class="invite-scene" id="inviteScene">
+      <div class="mail-hint" id="mailHint">Vuốt lên để mở thiệp</div>
+
+      <div class="lux-envelope" id="luxEnvelope">
+        <div class="lux-card" id="luxCard">
+          <div class="lux-card__inner">
+            <p class="lux-kicker">SAVE THE DATE</p>
+            <h2 class="lux-title">Thiệp Mời<br>Thành Hôn</h2>
+            <p class="lux-names">Vũ Nguyễn Anh San &amp; Ngô Mạc Như Quỳnh</p>
+            <p class="lux-desc">
+              Trân trọng kính mời bạn cùng gia đình đến chung vui trong ngày hạnh phúc của chúng tôi.
+            </p>
+          </div>
+        </div>
+
+        <div class="lux-envelope__back"></div>
+        <div class="lux-envelope__front"></div>
+        <div class="lux-envelope__flap" id="luxFlap"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="container">
+      <div class="masthead-subheading">Trân trọng thông báo</div>
+      <div class="masthead-heading text-uppercase">CHÚNG TÔI KẾT HÔN</div>
+      <a class="btn btn-primary btn-xl text-uppercase" href="#services">Cùng xem nhé!</a>
+    </div>
+  </header>
+
+  <!-- Happy Wedding -->
+  <section class="page-section happy-section" id="services">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase happy-title">Happy Wedding</h2>
+      </div>
+
+      <div class="couple-grid">
+        <!-- Chú rể -->
+        <div class="couple-card">
+          <div class="avatar-wrap">
+            <img class="avatar" src="assets/img/gallery/111.jpg" alt="Chú rể">
+          </div>
+
+          <div class="role">Chú Rể</div>
+          <div class="name-script">Vũ Nguyễn Anh San</div>
+
+          <div class="parents">
+            <div class="label">Con Ông Bà</div>
+            <div class="parent-name">Vũ Viết Vương</div>
+            <div class="parent-name">Nguyễn Thị Lý</div>
+          </div>
+
+          <div class="addr">Đức Lập, Lâm Đồng</div>
+        </div>
+
+        <!-- Cô dâu -->
+        <div class="couple-card">
+          <div class="avatar-wrap">
+            <img class="avatar" src="assets/img/gallery/222.jpg" alt="Cô dâu">
+          </div>
+
+          <div class="role">Cô Dâu</div>
+          <div class="name-script">Ngô Mạc Như Quỳnh</div>
+
+          <div class="parents">
+            <div class="label">Con Ông Bà</div>
+            <div class="parent-name">Ngô Tuấn Khiêm</div>
+            <div class="parent-name">Mạc Thị Hằng</div>
+          </div>
+
+          <div class="addr">Ea Wy, Đăk Lăk</div>
+        </div>
+      </div>
+
+      <div class="ceremony">
+        <div class="ceremony-title">TIỆC BÁO HỶ ĐƯỢC CỬ HÀNH TẠI</div>
+        <div class="ceremony-place">Gòn Garden</div>
+
+        <div class="ceremony-sub">VÀO LÚC</div>
+        <div class="ceremony-time">17:00</div>
+
+        <div class="ceremony-date">
+          CHỦ NHẬT
+          <span class="big-day">08</span>
+          THÁNG
+          <span class="big-day">02</span>
+          NĂM
+          <span class="big-day">2026</span>
+        </div>
+
+        <div class="ceremony-lunar">(Tức ngày 21 tháng 12 năm Ất Tỵ)</div>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.9998570634193!2d108.0478410758182!3d12.713431987578732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171f7ab8fd145df%3A0xd6460111c4bfda36!2zR8OybiBHYXJkZW4gQkJRICYg4bqobSBUaOG7sWMgxJDhu5NuZyBCw6BvIMOKLcSQw6o!5e0!3m2!1svi!2s!4v1768311397384!5m2!1svi!2s"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="place-address">
+        327/78/10 Y Moan Ênuôl, Cư Ê Bur, Buôn Ma Thuột, Đắk Lắk, Việt Nam
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="page-section bg-light" id="gallery">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Album Ảnh Cưới</h2>
+      </div>
+
+      <div class="album-grid" id="albumGrid"></div>
+    </div>
+  </section>
+
+  <!-- Modal viewer -->
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <div class="viewer__overlay" data-close></div>
+
+    <div class="viewer__counter" id="viewerCounter">1 / 1</div>
+    <button class="viewer__close" type="button" aria-label="Đóng" data-close>✕</button>
+
+    <button class="viewer__arrow viewer__arrow--left" type="button" aria-label="Trước" id="prevBtn">‹</button>
+    <button class="viewer__arrow viewer__arrow--right" type="button" aria-label="Sau" id="nextBtn">›</button>
+
+    <div class="viewer__stage">
+      <div class="viewer__frame">
+        <img class="viewer__main" id="viewerMain" src="" alt="Ảnh cưới" />
+      </div>
+    </div>
+
+    <div class="viewer__thumbbar">
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+  </div>
+
+  <!-- Guestbook + Gift -->
+  <div class="bg-section-07">
+    <section class="page-section bg-light" id="guestbook">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase" style="color:#7b1e1e;">Sổ Lưu Bút</h2>
+          <h3 class="section-subheading text-muted">Gửi lời chúc đến cô dâu &amp; chú rể 💛</h3>
+        </div>
+
+        <div class="guestbook-wrap">
+          <div class="guestbook-form">
+            <div class="gb-row">
+              <input id="gbName" type="text" placeholder="Nhập tên của bạn *">
+              <textarea id="gbMsg" rows="4" placeholder="Nhập lời chúc của bạn *"></textarea>
+            </div>
+
+            <div class="guestbook-actions">
+              <button id="gbSend" type="button">GỬI LỜI CHÚC</button>
+            </div>
+
+            <div id="gbStatus" class="guestbook-status"></div>
+          </div>
+
+          <div class="guestbook-list" id="gbList"></div>
+
+          <div class="text-center mt-3">
+            <button id="gbMore" class="gb-more" type="button">Xem thêm</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section bg-light" id="gift">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">Hộp Mừng Cưới</h2>
+          <h3 class="section-subheading text-muted">
+            Nếu có thể, bạn hãy tới tham dự Đám cưới, chung vui và Mừng cưới trực tiếp cho chúng mình nhé ^^. Cảm ơn bạn rất nhiều💛
+          </h3>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-5 text-center mb-4">
+            <h4 class="mb-3">Chú rể</h4>
+            <img
+              src="assets/img/portfolio/qrchure.png"
+              alt="QR mừng cưới Vũ Nguyễn Anh San"
+              class="img-fluid rounded shadow"
+              style="max-width: 260px;"
+            >
+            <p class="mt-3">
+              <strong>Vũ Nguyễn Anh San</strong>
+            </p>
+            <p class="text-muted">Vietinbank – 1048 7233 2618</p>
+          </div>
+
+          <div class="col-md-5 text-center mb-4">
+            <h4 class="mb-3">Cô dâu</h4>
+            <img
+              src="assets/img/portfolio/qrcodau.png"
+              alt="QR mừng cưới Ngô Mạc Như Quỳnh"
+              class="img-fluid rounded shadow"
+              style="max-width: 260px;"
+            >
+            <p class="mt-3">
+              <strong>Ngô Mạc Như Quỳnh</strong>
+            </p>
+            <p class="text-muted">Vietcombank – 1042320337</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Portfolio modals -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <h2 class="text-uppercase">Project Name</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <ul class="list-inline">
+                  <li><strong>Client:</strong> Threads</li>
+                  <li><strong>Category:</strong> Illustration</li>
+                </ul>
+                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                  <i class="fas fa-xmark me-1"></i>
+                  Close Project
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Happy Wedding</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#gallery">Ảnh cưới</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#guestbook">SỔ LƯU BÚT</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#gift">HỘP MỪNG CƯỚI</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="mail-opening" id="mailOpening">
-          <div class="mail-opening__bg"></div>
-        
-          <div class="invite-scene" id="inviteScene">
-            <div class="mail-hint" id="mailHint">Thả tay để mở tiếp</div>
-        
-            <div class="lux-envelope" id="luxEnvelope">
-              <div class="lux-card" id="luxCard">
-                <div class="lux-card__inner">
-                  <p class="lux-kicker">SAVE THE DATE</p>
-                  <h2 class="lux-title">Thiệp Mời<br>Thành Hôn</h2>
-                  <p class="lux-names">Vũ Nguyễn Anh San &amp; Ngô Mạc Như Quỳnh</p>
-                  <p class="lux-desc">
-                    Trân trọng kính mời bạn cùng gia đình đến chung vui trong ngày hạnh phúc của chúng tôi.
-                  </p>
-                </div>
               </div>
-        
-              <div class="lux-envelope__back"></div>
-              <div class="lux-envelope__front"></div>
-              <div class="lux-envelope__flap" id="luxFlap"></div>
             </div>
           </div>
         </div>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container">
-                <div class="masthead-subheading">Trân trọng thông báo</div>
-                <div class="masthead-heading text-uppercase">CHÚNG TÔI KẾT HÔN</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Cùng xem nhé!</a>
-            </div>
-        </header>
-        <!-- Services-->
-        <section class="page-section happy-section" id="services">
-          <div class="container">
-            <div class="text-center">
-              <h2 class="section-heading text-uppercase happy-title">Happy Wedding</h2>
-            </div>
-        
-            <div class="couple-grid">
-              <!-- Chú rể -->
-              <div class="couple-card">
-                <div class="avatar-wrap">
-                  <img class="avatar" src="assets/img/gallery/111.jpg" alt="Chú rể">
-                </div>
-        
-                <div class="role">Chú Rể</div>
-                <div class="name-script">Vũ Nguyễn Anh San</div>
-        
-                <div class="parents">
-                  <div class="label">Con Ông Bà</div>
-                  <div class="parent-name">Vũ Viết Vương</div>
-                  <div class="parent-name">Nguyễn Thị Lý</div>
-                </div>
-        
-                <div class="addr">
-                  Đức Lập, Lâm Đồng
-                </div>
-              </div>
-        
-              <!-- Cô dâu -->
-              <div class="couple-card">
-                <div class="avatar-wrap">
-                  <img class="avatar" src="assets/img/gallery/222.jpg" alt="Cô dâu">
-                </div>
-        
-                <div class="role">Cô Dâu</div>
-                <div class="name-script">Ngô Mạc Như Quỳnh</div>
-        
-                <div class="parents">
-                  <div class="label">Con Ông Bà</div>
-                  <div class="parent-name">Ngô Tuấn Khiêm</div>
-                  <div class="parent-name">Mạc Thị Hằng</div>
-                </div>
-        
-                <div class="addr">
-                  Ea Wy, Đăk Lăk
-                </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <h2 class="text-uppercase">Project Name</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <ul class="list-inline">
+                  <li><strong>Client:</strong> Explore</li>
+                  <li><strong>Category:</strong> Graphic Design</li>
+                </ul>
+                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                  <i class="fas fa-xmark me-1"></i>
+                  Close Project
+                </button>
               </div>
             </div>
-        
-            <div class="ceremony">
-              <div class="ceremony-title">TIỆC BÁO HỶ ĐƯỢC CỬ HÀNH TẠI</div>
-              <div class="ceremony-place">Gòn Garden</div>
-        
-              <div class="ceremony-sub">VÀO LÚC</div>
-              <div class="ceremony-time">17:00</div>
-        
-            <div class="ceremony-date">
-              CHỦ NHẬT 
-              <span class="big-day">08</span> 
-              THÁNG 
-              <span class="big-day">02</span> 
-              NĂM
-              <span class="big-day">2026</span>
-            </div>
-        
-              <div class="ceremony-lunar">(Tức ngày 21 tháng 12 năm Ất Tỵ)</div>
-            </div>
-        
-            <div class="map-wrap">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.9998570634193!2d108.0478410758182!3d12.713431987578732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3171f7ab8fd145df%3A0xd6460111c4bfda36!2zR8OybiBHYXJkZW4gQkJRICYg4bqobSBUaOG7sWMgxJDhu5NuZyBCw6BvIMOKLcSQw6o!5e0!3m2!1svi!2s!4v1768311397384!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">  
-              </iframe>
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        
-            <div class="place-address">
-              327/78/10 Y Moan Ênuôl, Cư Ê Bur, Buôn Ma Thuột, Đắk Lắk, Việt Nam
-            </div>
-          </div>
-        </section>
-        <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="gallery">
-          <div class="container">
-            <div class="text-center">
-              <h2 class="section-heading text-uppercase">Album Ảnh Cưới</h2>
-            </div>
-        
-            <!-- Grid ngoài -->
-            <div class="album-grid" id="albumGrid"></div>
-          </div>
-        </section>
-        
-        <!-- Modal viewer -->
-        <div class="viewer" id="viewer" aria-hidden="true">
-          <div class="viewer__overlay" data-close></div>
-        
-          <div class="viewer__counter" id="viewerCounter">1 / 1</div>
-          <button class="viewer__close" type="button" aria-label="Đóng" data-close>✕</button>
-        
-          <button class="viewer__arrow viewer__arrow--left" type="button" aria-label="Trước" id="prevBtn">‹</button>
-          <button class="viewer__arrow viewer__arrow--right" type="button" aria-label="Sau" id="nextBtn">›</button>
-        
-          <div class="viewer__stage">
-            <div class="viewer__frame">
-              <img class="viewer__main" id="viewerMain" src="" alt="Ảnh cưới" />
-            </div>
-          </div>
-        
-          <div class="viewer__thumbbar">
-            <div class="thumbs" id="thumbs"></div>
           </div>
         </div>
-        <!-- About-->
-            <!-- Wish-->
-        <div class="bg-section-07">
-            <section class="page-section bg-light" id="guestbook">
-              <div class="container">
-                <div class="text-center">
-                  <h2 class="section-heading text-uppercase" style="color:#7b1e1e;">Sổ Lưu Bút</h2>
-                  <h3 class="section-subheading text-muted">Gửi lời chúc đến cô dâu &amp; chú rể 💛</h3>
-                </div>
-            
-                <div class="guestbook-wrap">
-                    <div class="guestbook-form">
-                      <div class="gb-row">
-                        <input id="gbName" type="text" placeholder="Nhập tên của bạn *">
-                        <textarea id="gbMsg" rows="4" placeholder="Nhập lời chúc của bạn *"></textarea>
-                      </div>
-                    
-                      <div class="guestbook-actions">
-                        <button id="gbSend" type="button">GỬI LỜI CHÚC</button>
-                      </div>
-                    
-                      <div id="gbStatus" class="guestbook-status"></div>
-                  </div>
-            
-                  <div class="guestbook-list" id="gbList"></div>
-            
-                  <div class="text-center mt-3">
-                    <button id="gbMore" class="gb-more" type="button">Xem thêm</button>
-                  </div>
-                </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <h2 class="text-uppercase">Project Name</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <ul class="list-inline">
+                  <li><strong>Client:</strong> Finish</li>
+                  <li><strong>Category:</strong> Identity</li>
+                </ul>
+                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                  <i class="fas fa-xmark me-1"></i>
+                  Close Project
+                </button>
               </div>
-            </section>
-        
-            <section class="page-section bg-light" id="gift">
-              <div class="container">
-                <div class="text-center">
-                  <h2 class="section-heading text-uppercase">Hộp Mừng Cưới</h2>
-                  <h3 class="section-subheading text-muted">
-                    Nếu có thể, bạn hãy tới tham dự Đám cưới, chung vui và Mừng cưới trực tiếp cho chúng mình nhé ^^. Cảm ơn bạn rất nhiều💛
-                  </h3>
-                </div>
-            
-                <div class="row justify-content-center mt-4">
-                  <!-- CHÚ RỂ -->
-                  <div class="col-md-5 text-center mb-4">
-                    <h4 class="mb-3">Chú rể</h4>
-                    <img 
-                      src="assets/img/portfolio/qrchure.png" 
-                      alt="QR mừng cưới Vũ Nguyễn Anh San"
-                      class="img-fluid rounded shadow"
-                      style="max-width: 260px;"
-                    >
-                    <p class="mt-3">
-                      <strong>Vũ Nguyễn Anh San</strong>
-                    </p>
-                    <p class="text-muted">
-                        Vietinbank – 1048 7233 2618
-                    </p>
-                  </div>
-            
-                  <!-- CÔ DÂU -->
-                  <div class="col-md-5 text-center mb-4">
-                    <h4 class="mb-3">Cô dâu</h4>
-                    <img 
-                      src="assets/img/portfolio/qrcodau.png" 
-                      alt="QR mừng cưới Ngô Mạc Như Quỳnh"
-                      class="img-fluid rounded shadow"
-                      style="max-width: 260px;"
-                    >
-                    <p class="mt-3">
-                      <strong>Ngô Mạc Như Quỳnh</strong>
-                    </p>
-                    <p class="text-muted">
-                        Vietcombank – 1042320337
-                    </p>
-                  </div>
-                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <h2 class="text-uppercase">Project Name</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <ul class="list-inline">
+                  <li><strong>Client:</strong> Lines</li>
+                  <li><strong>Category:</strong> Branding</li>
+                </ul>
+                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                  <i class="fas fa-xmark me-1"></i>
+                  Close Project
+                </button>
               </div>
-            </section>
-        </div>
-        <!-- Portfolio Modals-->
-        <!-- Portfolio item 1 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Threads
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Illustration
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+          </div>
         </div>
-        <!-- Portfolio item 2 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Explore
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <h2 class="text-uppercase">Project Name</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <ul class="list-inline">
+                  <li><strong>Client:</strong> Southwest</li>
+                  <li><strong>Category:</strong> Website Design</li>
+                </ul>
+                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                  <i class="fas fa-xmark me-1"></i>
+                  Close Project
+                </button>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Portfolio item 3 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Finish
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Identity
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="modal-body">
+                <h2 class="text-uppercase">Project Name</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                <ul class="list-inline">
+                  <li><strong>Client:</strong> Window</li>
+                  <li><strong>Category:</strong> Photography</li>
+                </ul>
+                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                  <i class="fas fa-xmark me-1"></i>
+                  Close Project
+                </button>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Portfolio item 4 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Lines
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Branding
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+  <script>
+    const images = [
+      "assets/img/gallery/01.jpg",
+      "assets/img/gallery/02.jpg",
+      "assets/img/gallery/03.jpg",
+      "assets/img/gallery/04.jpg",
+      "assets/img/gallery/05.jpg",
+      "assets/img/gallery/06.jpg",
+      "assets/img/gallery/08.jpg",
+      "assets/img/gallery/09.jpg",
+      "assets/img/gallery/10.jpg",
+      "assets/img/gallery/11.jpg"
+    ];
+
+    const albumGrid = document.getElementById("albumGrid");
+    const viewer = document.getElementById("viewer");
+    const viewerMain = document.getElementById("viewerMain");
+    const viewerCounter = document.getElementById("viewerCounter");
+    const thumbsEl = document.getElementById("thumbs");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let currentIndex = 0;
+
+    function renderOutsideGrid() {
+      const show = Math.min(4, images.length);
+      albumGrid.innerHTML = "";
+
+      for (let i = 0; i < show; i++) {
+        const card = document.createElement("div");
+        card.className = "album-card";
+        card.dataset.index = String(i);
+
+        card.innerHTML = `
+          <img src="${images[i]}" alt="Ảnh ${i + 1}" />
+          ${i === 3 && images.length > 4 ? `<div class="more-badge">+${images.length - 4}</div>` : ``}
+        `;
+
+        card.addEventListener("click", () => openViewer(i));
+        albumGrid.appendChild(card);
+      }
+    }
+
+    function renderThumbs() {
+      thumbsEl.innerHTML = "";
+      images.forEach((src, idx) => {
+        const t = document.createElement("div");
+        t.className = "thumb";
+        t.dataset.index = String(idx);
+        t.innerHTML = `<img src="${src}" alt="thumb ${idx + 1}" />`;
+        t.addEventListener("click", () => setIndex(idx, true));
+        thumbsEl.appendChild(t);
+      });
+    }
+
+    function updateActiveThumb(scrollIntoView = false) {
+      const all = thumbsEl.querySelectorAll(".thumb");
+      all.forEach(el => el.classList.remove("is-active"));
+      const active = thumbsEl.querySelector(`.thumb[data-index="${currentIndex}"]`);
+      if (active) {
+        active.classList.add("is-active");
+        if (scrollIntoView) {
+          active.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        }
+      }
+    }
+
+    function setIndex(idx, scrollThumb = false) {
+      currentIndex = (idx + images.length) % images.length;
+      viewerMain.src = images[currentIndex];
+      viewerCounter.textContent = `${currentIndex + 1} / ${images.length}`;
+      updateActiveThumb(scrollThumb);
+    }
+
+    function openViewer(startIndex) {
+      viewer.classList.add("is-open");
+      viewer.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      setIndex(startIndex, true);
+    }
+
+    function closeViewer() {
+      viewer.classList.remove("is-open");
+      viewer.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function next() {
+      setIndex(currentIndex + 1, true);
+    }
+
+    function prev() {
+      setIndex(currentIndex - 1, true);
+    }
+
+    prevBtn.addEventListener("click", prev);
+    nextBtn.addEventListener("click", next);
+
+    viewer.addEventListener("click", (e) => {
+      if (e.target && e.target.matches("[data-close]")) closeViewer();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (!viewer.classList.contains("is-open")) return;
+      if (e.key === "Escape") closeViewer();
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft") prev();
+    });
+
+    renderOutsideGrid();
+    renderThumbs();
+  </script>
+
+  <script>
+    const GB_API = "https://script.google.com/macros/s/AKfycbx6uKyTrrE9kx4wsW1dIon1RhnpH4Nba31AW2id_GzCeuI17L49pAUrdxjXKUncJQyw1Q/exec";
+    let gbLimit = 10;
+
+    const elName = document.getElementById("gbName");
+    const elMsg = document.getElementById("gbMsg");
+    const elSend = document.getElementById("gbSend");
+    const elStatus = document.getElementById("gbStatus");
+    const elList = document.getElementById("gbList");
+    const elMore = document.getElementById("gbMore");
+
+    function fmtTime(t) {
+      try {
+        const d = new Date(t);
+        return d.toLocaleString("vi-VN");
+      } catch (e) {
+        return "";
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, m => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[m]));
+    }
+
+    function render(items) {
+      elList.innerHTML = items.map(it => {
+        const name = (it.name || "").trim();
+        const initial = name ? name[0].toUpperCase() : "❤";
+        return `
+          <div class="wish-card">
+            <div class="wish-avatar">${escapeHtml(initial)}</div>
+            <div class="wish-body">
+              <div class="wish-top">
+                <div class="wish-name">${escapeHtml(name || "Ẩn danh")}</div>
+                <div class="wish-time">${fmtTime(it.time)}</div>
+              </div>
+              <div class="wish-msg">${escapeHtml(it.message || "")}</div>
             </div>
-        </div>
-        <!-- Portfolio item 5 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Southwest
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Website Design
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio item 6 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Photography
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script>
-          const images = [
-            "assets/img/gallery/01.jpg",
-            "assets/img/gallery/02.jpg",
-            "assets/img/gallery/03.jpg",
-            "assets/img/gallery/04.jpg",
-            "assets/img/gallery/05.jpg",
-            "assets/img/gallery/06.jpg",
-            "assets/img/gallery/08.jpg",
-            "assets/img/gallery/09.jpg",
-            "assets/img/gallery/10.jpg",
-            "assets/img/gallery/11.jpg"
-          ];
-        
-          const albumGrid = document.getElementById("albumGrid");
-          const viewer = document.getElementById("viewer");
-          const viewerMain = document.getElementById("viewerMain");
-          const viewerCounter = document.getElementById("viewerCounter");
-          const thumbsEl = document.getElementById("thumbs");
-          const prevBtn = document.getElementById("prevBtn");
-          const nextBtn = document.getElementById("nextBtn");
-        
-          let currentIndex = 0;
-        
-          function renderOutsideGrid() {
-            const show = Math.min(4, images.length);
-            albumGrid.innerHTML = "";
-        
-            for (let i = 0; i < show; i++) {
-              const card = document.createElement("div");
-              card.className = "album-card";
-              card.dataset.index = String(i);
-        
-              card.innerHTML = `
-                <img src="${images[i]}" alt="Ảnh ${i+1}" />
-                ${i === 3 && images.length > 4 ? `<div class="more-badge">+${images.length - 4}</div>` : ``}
-              `;
-        
-              card.addEventListener("click", () => openViewer(i));
-              albumGrid.appendChild(card);
-            }
-          }
-        
-          function renderThumbs() {
-            thumbsEl.innerHTML = "";
-            images.forEach((src, idx) => {
-              const t = document.createElement("div");
-              t.className = "thumb";
-              t.dataset.index = String(idx);
-              t.innerHTML = `<img src="${src}" alt="thumb ${idx+1}" />`;
-              t.addEventListener("click", () => setIndex(idx, true));
-              thumbsEl.appendChild(t);
-            });
-          }
-        
-          function updateActiveThumb(scrollIntoView = false) {
-            const all = thumbsEl.querySelectorAll(".thumb");
-            all.forEach(el => el.classList.remove("is-active"));
-            const active = thumbsEl.querySelector(`.thumb[data-index="${currentIndex}"]`);
-            if (active) {
-              active.classList.add("is-active");
-              if (scrollIntoView) active.scrollIntoView({ behavior:"smooth", inline:"center", block:"nearest" });
-            }
-          }
-        
-          function setIndex(idx, scrollThumb = false) {
-            currentIndex = (idx + images.length) % images.length;
-            viewerMain.src = images[currentIndex];
-            viewerCounter.textContent = `${currentIndex + 1} / ${images.length}`;
-            updateActiveThumb(scrollThumb);
-          }
-        
-          function openViewer(startIndex) {
-            viewer.classList.add("is-open");
-            viewer.setAttribute("aria-hidden", "false");
-            document.body.style.overflow = "hidden";
-            setIndex(startIndex, true);
-          }
-        
-          function closeViewer() {
-            viewer.classList.remove("is-open");
-            viewer.setAttribute("aria-hidden", "true");
-            document.body.style.overflow = "";
-          }
-        
-          function next() { setIndex(currentIndex + 1, true); }
-          function prev() { setIndex(currentIndex - 1, true); }
-        
-          prevBtn.addEventListener("click", prev);
-          nextBtn.addEventListener("click", next);
-        
-          viewer.addEventListener("click", (e) => {
-            if (e.target && e.target.matches("[data-close]")) closeViewer();
-          });
-        
-          window.addEventListener("keydown", (e) => {
-            if (!viewer.classList.contains("is-open")) return;
-            if (e.key === "Escape") closeViewer();
-            if (e.key === "ArrowRight") next();
-            if (e.key === "ArrowLeft") prev();
-          });
-        
-          // INIT
-          renderOutsideGrid();
-          renderThumbs();
-        </script> 
-        <script>
-          const GB_API = "https://script.google.com/macros/s/AKfycbx6uKyTrrE9kx4wsW1dIon1RhnpH4Nba31AW2id_GzCeuI17L49pAUrdxjXKUncJQyw1Q/exec"; // dán URL Apps Script /exec vào đây
-          let gbLimit = 10;
-        
-          const elName = document.getElementById("gbName");
-          const elMsg = document.getElementById("gbMsg");
-          const elSend = document.getElementById("gbSend");
-          const elStatus = document.getElementById("gbStatus");
-          const elList = document.getElementById("gbList");
-          const elMore = document.getElementById("gbMore");
-        
-          function fmtTime(t){
-            try{
-              const d = new Date(t);
-              return d.toLocaleString("vi-VN");
-            }catch(e){ return ""; }
-          }
-        
-          function render(items){
-              elList.innerHTML = items.map(it => {
-                const name = (it.name || "").trim();
-                const initial = name ? name[0].toUpperCase() : "❤";
-                return `
-                  <div class="wish-card">
-                    <div class="wish-avatar">${escapeHtml(initial)}</div>
-            
-                    <div class="wish-body">
-                      <div class="wish-top">
-                        <div class="wish-name">${escapeHtml(name || "Ẩn danh")}</div>
-                        <div class="wish-time">${fmtTime(it.time)}</div>
-                      </div>
-                      <div class="wish-msg">${escapeHtml(it.message || "")}</div>
-                    </div>
-                  </div>
-                `;
-              }).join("");
-            }
-            
-          function escapeHtml(s){
-            return String(s).replace(/[&<>"']/g, m => ({
-              "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-            }[m]));
-          }
-        
-          async function loadWishes(){
-            const url = `${GB_API}?action=list&limit=${gbLimit}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            if (data.ok) render(data.items || []);
-          }
-        
-          async function sendWish(){
-            const name = (elName.value || "").trim();
-            const message = (elMsg.value || "").trim();
-        
-            if(!name || !message){
-              elStatus.textContent = "Vui lòng nhập tên và lời chúc.";
-              return;
-            }
-        
-            elSend.disabled = true;
-            elStatus.textContent = "Đang gửi...";
-        
-            const res = await fetch(GB_API, {
-              method: "POST",
-              headers: { "Content-Type": "text/plain;charset=utf-8" },
-              body: JSON.stringify({ name, message, ua: navigator.userAgent })
-            });
-        
-            const data = await res.json();
-            if(data.ok){
-              elStatus.textContent = "Đã gửi lời chúc 💛";
-              elMsg.value = "";
-              gbLimit = Math.max(gbLimit, 10);
-              await loadWishes();
-            }else{
-              elStatus.textContent = "Gửi thất bại: " + (data.error || "Unknown");
-            }
-        
-            elSend.disabled = false;
-          }
-        
-          elSend.addEventListener("click", sendWish);
-          elMore.addEventListener("click", async () => { gbLimit += 10; await loadWishes(); });
-        
-          // load lần đầu
-          loadWishes();
-        </script>
-        <footer class="wedding-footer">
-          Đến chung vui với chúng mình nhé!
-        </footer>
-        <script>
-        (function () {
-          const OFFSET = 90; // chiều cao navbar, chỉnh 70-110 tùy giao diện
-        
-          function getHashFromHref(href) {
-            try {
-              // hỗ trợ cả #id và /path#id và full URL#id
-              const u = new URL(href, window.location.href);
-              return u.hash; // "#guestbook"
-            } catch (e) {
-              // fallback nếu href lạ
-              const i = href.indexOf("#");
-              return i >= 0 ? href.slice(i) : "";
-            }
-          }
-        
-          document.addEventListener("click", function (e) {
-            const a = e.target.closest('a[href*="#"]');
-            if (!a) return;
-        
-            const hash = getHashFromHref(a.getAttribute("href"));
-            if (!hash || hash === "#") return;
-        
-            // chỉ xử lý nếu hash trỏ tới element trong trang hiện tại
-            const el = document.querySelector(hash);
-            if (!el) return;
-        
-            e.preventDefault();
-        
-            const top = el.getBoundingClientRect().top + window.pageYOffset - OFFSET;
-            window.scrollTo({ top, behavior: "smooth" });
-        
-            // cập nhật URL hash nhưng không nhảy
-            history.pushState(null, "", hash);
-        
-            // đóng menu mobile nếu đang mở (Bootstrap)
-            const toggler = document.querySelector(".navbar-toggler");
-            const collapse = document.querySelector("#navbarResponsive");
-            if (toggler && collapse && collapse.classList.contains("show")) toggler.click();
-          });
-        })();
-        </script>
-    </body>
+          </div>
+        `;
+      }).join("");
+    }
+
+    async function loadWishes() {
+      const url = `${GB_API}?action=list&limit=${gbLimit}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      if (data.ok) render(data.items || []);
+    }
+
+    async function sendWish() {
+      const name = (elName.value || "").trim();
+      const message = (elMsg.value || "").trim();
+
+      if (!name || !message) {
+        elStatus.textContent = "Vui lòng nhập tên và lời chúc.";
+        return;
+      }
+
+      elSend.disabled = true;
+      elStatus.textContent = "Đang gửi...";
+
+      const res = await fetch(GB_API, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ name, message, ua: navigator.userAgent })
+      });
+
+      const data = await res.json();
+      if (data.ok) {
+        elStatus.textContent = "Đã gửi lời chúc 💛";
+        elMsg.value = "";
+        gbLimit = Math.max(gbLimit, 10);
+        await loadWishes();
+      } else {
+        elStatus.textContent = "Gửi thất bại: " + (data.error || "Unknown");
+      }
+
+      elSend.disabled = false;
+    }
+
+    elSend.addEventListener("click", sendWish);
+    elMore.addEventListener("click", async () => {
+      gbLimit += 10;
+      await loadWishes();
+    });
+
+    loadWishes();
+  </script>
+
+  <footer class="wedding-footer">
+    Đến chung vui với chúng mình nhé!
+  </footer>
+
+  <script>
+    (function () {
+      const OFFSET = 90;
+
+      function getHashFromHref(href) {
+        try {
+          const u = new URL(href, window.location.href);
+          return u.hash;
+        } catch (e) {
+          const i = href.indexOf("#");
+          return i >= 0 ? href.slice(i) : "";
+        }
+      }
+
+      document.addEventListener("click", function (e) {
+        const a = e.target.closest('a[href*="#"]');
+        if (!a) return;
+
+        const hash = getHashFromHref(a.getAttribute("href"));
+        if (!hash || hash === "#") return;
+
+        const el = document.querySelector(hash);
+        if (!el) return;
+
+        e.preventDefault();
+
+        const top = el.getBoundingClientRect().top + window.pageYOffset - OFFSET;
+        window.scrollTo({ top, behavior: "smooth" });
+
+        history.pushState(null, "", hash);
+
+        const toggler = document.querySelector(".navbar-toggler");
+        const collapse = document.querySelector("#navbarResponsive");
+        if (toggler && collapse && collapse.classList.contains("show")) toggler.click();
+      });
+    })();
+  </script>
+</body>
 </html>
