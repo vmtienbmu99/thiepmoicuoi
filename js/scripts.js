@@ -41,41 +41,52 @@ window.addEventListener("DOMContentLoaded", () => {
 // =========================
 // Luxury invitation opening
 // =========================
+// =========================
+// Sealed envelope intro
+// =========================
 (function () {
   const opening = document.getElementById("mailOpening");
-  const scene = document.getElementById("inviteScene");
-  const flap = document.getElementById("luxFlap");
-  const card = document.getElementById("luxCard");
-  const hint = document.getElementById("mailHint");
+  const scene = document.getElementById("sealedScene");
+  const envelope = document.getElementById("sealedEnvelope");
+  const flap = document.getElementById("sealedFlap");
+  const paper = envelope ? envelope.querySelector(".sealed-envelope__paper") : null;
+  const seal = document.getElementById("sealedSeal");
+  const hint = document.getElementById("sealedHint");
 
-  if (!opening || !scene || !flap || !card || !hint) return;
+  if (!opening || !scene || !envelope || !flap || !paper || !seal || !hint) return;
 
   document.body.classList.add("mail-lock");
 
-  let startY = 0;
-  let currentProgress = 0;
+  let progress = 0;
   let dragging = false;
+  let startY = 0;
   let opened = false;
 
   const clamp = (n, min, max) => Math.min(Math.max(n, min), max);
 
-  function render(progress) {
-    currentProgress = clamp(progress, 0, 1);
+  function render(p) {
+    progress = clamp(p, 0, 1);
 
-    const flapRotate = currentProgress * -180;
-
-    // bản to hơn, che đúng hơn
-    const cardMove = 290 - currentProgress * 345;
+    const flapRotate = -180 * progress;
+    const paperMove = window.innerWidth <= 640
+      ? 232 - progress * 250
+      : 285 - progress * 320;
 
     flap.style.transform = `rotateX(${flapRotate}deg)`;
-    card.style.transform = `translateX(-50%) translateY(${cardMove}px)`;
+    paper.style.transform = `translateX(-50%) translateY(${paperMove}px)`;
 
-    if (currentProgress < 0.12) {
-      hint.textContent = "Vuốt lên để mở thiệp";
-    } else if (currentProgress < 0.95) {
-      hint.textContent = "Thả tay để mở tiếp";
+    if (progress < 0.12) {
+      hint.textContent = "Chạm vào dấu niêm để mở";
+    } else if (progress < 0.95) {
+      hint.textContent = "Vuốt lên để mở tiếp";
     } else {
-      hint.textContent = "Vuốt xuống để đóng • chạm để vào thiệp";
+      hint.textContent = "Chạm để vào thiệp";
+    }
+
+    if (progress > 0.02) {
+      envelope.classList.add("is-opening");
+    } else {
+      envelope.classList.remove("is-opening");
     }
   }
 
@@ -86,76 +97,58 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function openFully() {
     opened = true;
-    flap.style.transition = "transform .45s ease";
-    card.style.transition = "transform .45s ease";
+    flap.style.transition = "transform .48s ease";
+    paper.style.transition = "transform .48s ease";
     render(1);
   }
 
   function closeFully() {
     opened = false;
-    flap.style.transition = "transform .35s ease";
-    card.style.transition = "transform .35s ease";
+    flap.style.transition = "transform .36s ease";
+    paper.style.transition = "transform .36s ease";
     render(0);
   }
 
+  seal.addEventListener("click", () => {
+    if (opened) return;
+    openFully();
+  });
+
   function pointerDown(clientY) {
-    dragging = true;
-    startY = clientY;
-    flap.style.transition = "none";
-    card.style.transition = "none";
+    if (!opened) {
+      dragging = true;
+      startY = clientY;
+      flap.style.transition = "none";
+      paper.style.transition = "none";
+    }
   }
 
   function pointerMove(clientY) {
     if (!dragging) return;
-
     const deltaY = clientY - startY;
-    let progress;
-
-    if (!opened) {
-      progress = clamp((-deltaY) / 260, 0, 1);
-    } else {
-      progress = clamp(1 - deltaY / 260, 0, 1);
-    }
-
-    render(progress);
+    const p = clamp((-deltaY) / 240, 0, 1);
+    render(Math.max(progress, p));
   }
 
   function pointerUp() {
     if (!dragging) return;
     dragging = false;
-
-    if (!opened) {
-      if (currentProgress > 0.32) {
-        openFully();
-      } else {
-        closeFully();
-      }
+    if (progress > 0.28) {
+      openFully();
     } else {
-      if (currentProgress < 0.68) {
-        closeFully();
-      } else {
-        openFully();
-      }
+      closeFully();
     }
   }
 
-  scene.addEventListener(
-    "touchstart",
-    (e) => {
-      if (!e.touches.length) return;
-      pointerDown(e.touches[0].clientY);
-    },
-    { passive: true }
-  );
+  scene.addEventListener("touchstart", (e) => {
+    if (!e.touches.length) return;
+    pointerDown(e.touches[0].clientY);
+  }, { passive: true });
 
-  scene.addEventListener(
-    "touchmove",
-    (e) => {
-      if (!e.touches.length) return;
-      pointerMove(e.touches[0].clientY);
-    },
-    { passive: true }
-  );
+  scene.addEventListener("touchmove", (e) => {
+    if (!e.touches.length) return;
+    pointerMove(e.touches[0].clientY);
+  }, { passive: true });
 
   scene.addEventListener("touchend", pointerUp);
 
@@ -171,7 +164,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   opening.addEventListener("click", (e) => {
     if (!opened) return;
-    if (scene.contains(e.target)) {
+    if (scene.contains(e.target) && e.target !== seal) {
       hideOpening();
     }
   });
