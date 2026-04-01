@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", () => {
     currentProgress = clamp(progress, 0, 1);
 
     const flapRotate = currentProgress * -180;
-    const cardMove = 120 - currentProgress * 250;
+    const cardMove = 215 - currentProgress * 295;
 
     flap.style.transform = `rotateX(${flapRotate}deg)`;
     card.style.transform = `translateX(-50%) translateY(${cardMove}px)`;
