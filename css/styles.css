@@ -12150,6 +12150,9 @@ body.invite-lock {
 /* =========================
    LUXURY ENVELOPE OPENING
 ========================= */
+/* =========================
+   SEALED ENVELOPE INTRO
+========================= */
 body.mail-lock {
   overflow: hidden;
 }
@@ -12162,7 +12165,7 @@ body.mail-lock {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: opacity .5s ease, visibility .5s ease;
+  transition: opacity .7s ease, visibility .7s ease;
 }
 
 .mail-opening.hidden {
@@ -12176,219 +12179,223 @@ body.mail-lock {
   inset: 0;
   background:
     radial-gradient(circle at top, rgba(255,255,255,.96), transparent 30%),
-    linear-gradient(180deg, #f7f2f0 0%, #f6f0ee 45%, #f1e8e5 100%);
+    linear-gradient(180deg, #f7f2f0 0%, #f5efed 44%, #efe7e4 100%);
 }
 
-.invite-scene {
+.sealed-scene {
   position: relative;
-  width: min(560px, calc(100vw - 32px));
-  height: 720px;
+  width: min(640px, calc(100vw - 32px));
+  height: 760px;
   z-index: 2;
   touch-action: none;
   user-select: none;
 }
 
-.mail-hint {
+.sealed-hint {
   position: absolute;
-  top: 28px;
+  top: 34px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 14px 22px;
+  padding: 14px 24px;
   border-radius: 999px;
-  background: rgba(255,255,255,.75);
-  border: 1px solid rgba(120, 92, 96, .08);
-  color: #a5797d;
+  background: rgba(255,255,255,.76);
+  border: 1px solid rgba(127, 102, 106, .08);
+  color: #a77d82;
   font-size: 14px;
-  letter-spacing: .05em;
+  letter-spacing: .04em;
   white-space: nowrap;
   box-shadow: 0 12px 28px rgba(0,0,0,.05);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 }
 
-/* KHUNG PHONG BÌ */
-.lux-envelope {
+.sealed-envelope {
   position: absolute;
   left: 50%;
-  bottom: 48px;
-  width: 420px;
-  height: 280px;
+  bottom: 56px;
+  width: 460px;
+  height: 320px;
   transform: translateX(-50%);
+  filter: drop-shadow(0 28px 44px rgba(79, 54, 59, .12));
 }
 
-/* MẶT SAU */
-.lux-envelope__back {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  border-radius: 0 0 22px 22px;
-  background: linear-gradient(180deg, #e6d7bb 0%, #d9c8a7 100%);
-  box-shadow: 0 26px 50px rgba(88, 60, 45, .14);
-}
-
-/* THIỆP */
-.lux-card {
+/* Lá thiệp bên trong, mặc định ẩn phần lớn */
+.sealed-envelope__paper {
   position: absolute;
   left: 50%;
-  bottom: 38px;
-  width: 330px;
-  height: 450px;
-  transform: translateX(-50%) translateY(290px);
-  z-index: 2;
-  transition: transform .18s linear;
-}
-
-.lux-card__inner {
-  position: relative;
-  height: 100%;
-  border-radius: 22px;
+  bottom: 92px;
+  width: 320px;
+  height: 430px;
+  transform: translateX(-50%) translateY(285px);
+  border-radius: 24px;
   background: linear-gradient(180deg, #fffefe 0%, #f8f3f1 100%);
   border: 1px solid rgba(199, 172, 138, .26);
   box-shadow:
-    0 22px 44px rgba(79, 54, 59, .14),
+    0 22px 40px rgba(79, 54, 59, .12),
     inset 0 0 0 1px rgba(255,255,255,.72);
-  padding: 38px 28px;
-  text-align: center;
+  z-index: 1;
+  transition: transform .22s linear;
   overflow: hidden;
 }
 
-.lux-card__inner::before {
+.sealed-envelope__paper::before {
   content: "";
   position: absolute;
   inset: 14px;
-  border-radius: 16px;
+  border-radius: 18px;
   border: 1px solid rgba(210, 185, 149, .34);
-  pointer-events: none;
 }
 
-.lux-kicker {
-  margin: 0;
-  font-size: 13px;
-  letter-spacing: .32em;
-  color: #b17c83;
-}
-
-.lux-title {
-  margin: 20px 0 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 68px;
-  line-height: .9;
-  color: #6b5257;
-  font-weight: 700;
-}
-
-.lux-names {
-  margin: 22px 0 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 36px;
-  line-height: 1.2;
-  color: #94646b;
-}
-
-.lux-desc {
-  margin: 18px 0 0;
-  font-size: 16px;
-  line-height: 1.85;
-  color: #7f7274;
-}
-
-/* MẶT TRƯỚC PHONG BÌ: CHE PHẦN DƯỚI CỦA THIỆP */
-.lux-envelope__front {
+.sealed-envelope__paper::after {
+  content: "SAVE THE DATE\A\AThiệp Mời\AThành Hôn\A\AVũ Nguyễn Anh San\A& Ngô Mạc Như Quỳnh";
+  white-space: pre-wrap;
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 190px;
-  z-index: 3;
-  border-radius: 0 0 22px 22px;
-  overflow: hidden;
+  inset: 36px 28px;
+  text-align: center;
+  color: #7d5d63;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.sealed-envelope__body {
+  position: absolute;
+  inset: 0;
+  border-radius: 0 0 26px 26px;
   background:
-    linear-gradient(135deg, transparent 49.5%, #d8c8a8 50%),
-    linear-gradient(225deg, transparent 49.5%, #dfd0b3 50%),
-    linear-gradient(315deg, transparent 49.5%, #d1c09f 50%);
+    linear-gradient(135deg, transparent 49.5%, #dacbab 50%),
+    linear-gradient(225deg, transparent 49.5%, #e2d5b9 50%),
+    linear-gradient(315deg, transparent 49.5%, #d4c3a2 50%);
+  overflow: hidden;
+  z-index: 2;
 }
 
-.lux-envelope__front::before {
+.sealed-envelope__body::before {
   content: "";
   position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 18px;
-  height: 42px;
-  background: rgba(255,255,255,.08);
-  border-radius: 12px;
-}
-
-.lux-envelope__front::after {
-  content: "";
-  position: absolute;
-  inset: 18px 22px 0;
-  background: linear-gradient(180deg, #e7d9be 0%, #dbcbae 100%);
+  inset: 0;
+  background: linear-gradient(180deg, #e9dbc0 0%, #ddcfb2 100%);
   clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
-  border-radius: 0 0 16px 16px;
 }
 
-/* NẮP PHONG BÌ */
-.lux-envelope__flap {
+.sealed-envelope__body::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 20px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.08);
+}
+
+/* Nắp phong bì */
+.sealed-envelope__flap {
   position: absolute;
   inset: 0;
   z-index: 4;
   transform-origin: top center;
-  transition: transform .18s linear;
-  pointer-events: none;
+  transition: transform .22s linear;
 }
 
-.lux-envelope__flap::before {
+.sealed-envelope__flap::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 175px;
-  background: linear-gradient(180deg, #ece0c4 0%, #e0d0af 100%);
+  height: 205px;
+  background: linear-gradient(180deg, #ece0c4 0%, #dfcfaf 100%);
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   box-shadow: 0 10px 18px rgba(0,0,0,.05);
 }
 
-/* RESPONSIVE */
+/* Seal */
+.sealed-envelope__seal {
+  position: absolute;
+  left: 50%;
+  top: 134px;
+  transform: translateX(-50%) scale(1);
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: none;
+  background:
+    radial-gradient(circle at 35% 35%, #f7d1d3 0%, #c56573 36%, #9f3f51 72%, #873144 100%);
+  box-shadow:
+    inset 0 4px 8px rgba(255,255,255,.18),
+    0 10px 22px rgba(124, 43, 62, .28);
+  z-index: 5;
+  cursor: pointer;
+  transition: transform .18s ease, opacity .3s ease;
+}
+
+.sealed-envelope__seal:hover {
+  transform: translateX(-50%) scale(1.04);
+}
+
+.sealed-envelope__seal-inner {
+  display: inline-flex;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff9f9;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,.26);
+}
+
+.sealed-envelope.is-opening .sealed-envelope__seal {
+  transform: translateX(-50%) scale(.7);
+  opacity: 0;
+  pointer-events: none;
+}
+
 @media (max-width: 640px) {
-  .invite-scene {
+  .sealed-scene {
     width: min(420px, calc(100vw - 20px));
-    height: 620px;
+    height: 640px;
   }
 
-  .lux-envelope {
+  .sealed-envelope {
     width: 330px;
     height: 230px;
-    bottom: 34px;
+    bottom: 42px;
   }
 
-  .lux-card {
-    width: 270px;
-    height: 380px;
-    transform: translateX(-50%) translateY(245px);
+  .sealed-envelope__paper {
+    width: 250px;
+    height: 340px;
+    bottom: 72px;
+    transform: translateX(-50%) translateY(232px);
   }
 
-  .lux-envelope__front {
-    height: 155px;
+  .sealed-envelope__paper::after {
+    inset: 28px 20px;
+    font-size: 18px;
   }
 
-  .lux-envelope__flap::before {
-    height: 145px;
+  .sealed-envelope__flap::before {
+    height: 150px;
   }
 
-  .lux-title {
-    font-size: 54px;
+  .sealed-envelope__seal {
+    width: 70px;
+    height: 70px;
+    top: 95px;
   }
 
-  .lux-names {
-    font-size: 28px;
+  .sealed-envelope__seal-inner {
+    width: 46px;
+    height: 46px;
+    font-size: 12px;
   }
 
-  .lux-desc {
-    font-size: 14px;
-  }
-
-  .mail-hint {
+  .sealed-hint {
     font-size: 13px;
     padding: 12px 18px;
   }
