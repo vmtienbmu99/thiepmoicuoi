@@ -55,25 +55,20 @@
   <!-- Opening invitation -->
   <div class="mail-opening" id="mailOpening">
     <div class="mail-opening__bg"></div>
-
-    <div class="invite-scene" id="inviteScene">
-      <div class="mail-hint" id="mailHint">Vuốt lên để mở thiệp</div>
-
-      <div class="lux-envelope" id="luxEnvelope">
-        <div class="lux-card" id="luxCard">
-          <div class="lux-card__inner">
-            <p class="lux-kicker">SAVE THE DATE</p>
-            <h2 class="lux-title">Thiệp Mời<br>Thành Hôn</h2>
-            <p class="lux-names">Vũ Nguyễn Anh San &amp; Ngô Mạc Như Quỳnh</p>
-            <p class="lux-desc">
-              Trân trọng kính mời bạn cùng gia đình đến chung vui trong ngày hạnh phúc của chúng tôi.
-            </p>
-          </div>
-        </div>
-
-        <div class="lux-envelope__back"></div>
-        <div class="lux-envelope__front"></div>
-        <div class="lux-envelope__flap" id="luxFlap"></div>
+  
+    <div class="sealed-scene" id="sealedScene">
+      <div class="sealed-hint" id="sealedHint">Chạm vào dấu niêm để mở</div>
+  
+      <div class="sealed-envelope" id="sealedEnvelope">
+        <div class="sealed-envelope__paper"></div>
+  
+        <div class="sealed-envelope__body"></div>
+  
+        <div class="sealed-envelope__flap" id="sealedFlap"></div>
+  
+        <button class="sealed-envelope__seal" id="sealedSeal" type="button" aria-label="Mở thiệp">
+          <span class="sealed-envelope__seal-inner">Mở</span>
+        </button>
       </div>
     </div>
   </div>
